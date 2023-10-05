@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Numery telefonów szpitalnych</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'hello/site.css' %}"/>
+    <!-- BOOTSTRAP --> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="navbar navbar-default">
+        <ul class="nav navbar-nav">
+            <li> <img src="https://www.szpital.zabrze.pl/images/logo-szpital-zabrze.png" width="270" height="50" alt="logo szpitala"> </li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+        </ul>
+    </div>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-12 mt-5">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-11 mt-5 ml-2"></div>
+    <div class="col-md-1 mt-5 ml-2">
+        <footer>
+            <p>&copy; kgluch 2023</p>
+        </footer>
+    </div>
+</div>
+</body>
+</html>
