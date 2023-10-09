@@ -1,0 +1,41 @@
+<script>
+    function searchTable() {
+        var searchTerm = document.getElementById('searchInput').value.toLowerCase();
+        var tableRows = document.querySelectorAll('table tr');
+        for (var i = 1; i < tableRows.length; i++) {
+          var rowCells = tableRows[i].getElementsByTagName('td');
+          var rowVisible = false;
+      
+          for (var j = 0; j < rowCells.length; j++) {
+            var cellText = rowCells[j].textContent || rowCells[j].innerText;
+      
+            if (cellText.toLowerCase().includes(searchTerm)) {
+              rowVisible = true;
+              break;
+            }
+          }
+      
+          tableRows[i].style.display = rowVisible ? 'table-row' : 'none';
+        }
+      }
+</script>
+
+<input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search...">
+<div id="tableContainer">
+  <table class='table'>
+    <tr>
+      <th>Nazwa</th>
+      <th>Nazwa2</th>
+      <th>Wewnętrzny</th>
+      <th>Nr. Tel</th>
+    </tr>
+    {% for clinic in clinics %}
+    <tr>
+      <td>{{ clinic.name }}</td>
+      <td>{{ clinic.department }}</td>
+      <td>{{ clinic.office }}</td>
+      <td>{{ clinic.phone }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>

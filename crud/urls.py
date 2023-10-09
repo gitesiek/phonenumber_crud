@@ -1,6 +1,6 @@
 from django.urls import path
-from crud import views
+from .views import clinic_list
 
 urlpatterns = [
-    path("", views.home, name="home"),
+    path('', clinic_list, name='clinic_list'),
 ]

@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from django.template import loader
-from django.http import HttpResponse
+from .models import Clinic
 
-def home(request):
-    return render(request, "home.html")
+def clinic_list(request):
+    clinics = Clinic.objects.all()
+    return render(request, 'home.html', {'clinics': clinics})
