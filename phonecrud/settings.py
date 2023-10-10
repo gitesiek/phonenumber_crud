@@ -123,4 +123,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = "/crud"
+LOGIN_REDIRECT_URL = "/crud_page"
+LOGOUT_REDIRECT_URL = "/"

@@ -1,6 +1,8 @@
-<h2>Log In</h2>
-<form method="post">
+<form method="post" action="{% url 'login' %}">
   {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Log In</button>
+  <label for="username">Login:</label>
+  <input type="text" id="username" name="username" required><br>
+  <label for="password">Hasło:</label>
+  <input type="password" id="password" name="password" required><br>
+  <input type="submit" value="Login">
 </form>
