@@ -1,3 +1,5 @@
+{% extends "home.html" %}
+{% block content %}
 <script>
     function searchTable() {
         var searchTerm = document.getElementById('searchInput').value.toLowerCase();
@@ -35,7 +37,9 @@
       <td>{{ clinic.department }}</td>
       <td>{{ clinic.office }}</td>
       <td>{{ clinic.phone }}</td>
+      {% block edit %}{% endblock edit %}
     </tr>
     {% endfor %}
   </table>
 </div>
+{% endblock content %}
