@@ -22,23 +22,29 @@
       }
 </script>
 
+<!-- szukajke trzeba przenieść do navbar/base.html. -->
 <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Search...">
 <div id="tableContainer">
   <table class='table'>
-    <tr>
-      <th>Nazwa</th>
-      <th>Nazwa2</th>
-      <th>Wewnętrzny</th>
-      <th>Nr. Tel</th>
-    </tr>
+    <thead>
+      <tr>
+        <th>Jednostka organizacyjna</th>
+        <th>Lokalizacja</th>
+        <th>Numer wew</th>
+        <th>Nr. Tel</th>
+      </tr>
+    </thead>
+    
     {% for clinic in clinics %}
-    <tr>
-      <td>{{ clinic.name }}</td>
-      <td>{{ clinic.department }}</td>
-      <td>{{ clinic.office }}</td>
-      <td>{{ clinic.phone }}</td>
-      {% block edit %}{% endblock edit %}
-    </tr>
+    <tbody>
+      <tr>
+        <td>{{ clinic.name }}</td>
+        <td>{{ clinic.department }}</td>
+        <td>{{ clinic.office }}</td>
+        <td>{{ clinic.phone }}</td>
+        {% block edit %}{% endblock edit %}
+      </tr>
+    </tbody>
     {% endfor %}
   </table>
 </div>
