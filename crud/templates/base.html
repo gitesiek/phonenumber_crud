@@ -13,13 +13,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="navbar navbar-default">
+    <nav class="navbar">
+        <div class="navlogo">
+            <img src="../../static/src/phone_logo.svg" alt="spsk1_phone_logo">
+        </div>
+        <div class="navbarmenu">
+            <ul class="navmenu">
+                <li class="nav-item">
+                    <a class="nav-item" href="">Lista telefonów</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item" href="">Użytkownicy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item" href="">Ustawienia</a>
+                </li>
+            </ul>
+            <form class="">
+                <input type="text" id="search" placeholder="Szukaj">
+            </form>
+        </div>
+    </nav>
+    <!-- <div class="navbar navbar-default">
         <ul class="nav navbar-nav">
             <li> <img src="https://www.szpital.zabrze.pl/images/logo-szpital-zabrze.png" width="270" height="50" alt="logo szpitala"> </li>
             <li><a href="#">Link</a></li>
             <li><a href="#">Link</a></li>
         </ul>
-    </div>
+    </div> -->
 <div class="container">
     <div class="row mt-5">
         <div class="col-md-12 mt-5">
@@ -30,10 +51,10 @@
 <div class="row">
     <div class="col-md-11 mt-5 ml-2"></div>
     <div class="col-md-1 mt-5 ml-2">
-        <footer>
-            <p>&copy; kgluch 2023</p>
-        </footer>
     </div>
 </div>
+<footer>
+    <p>&copy; kgluch 2023</p>
+</footer>
 </body>
 </html>
