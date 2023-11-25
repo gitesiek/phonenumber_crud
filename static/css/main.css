@@ -1,0 +1,71 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+body {
+    min-height: 100vh;
+}
+
+img, picture, svg {
+    display: block;
+    max-width: 100%;
+}
+
+.navbar {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    padding: 30px 50px;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+.navbarmenu {
+    display: flex;
+    align-items: center;
+}
+
+.navmenu {
+  display: flex;
+  font-size: 16px;
+  list-style: none;
+}
+
+li {
+  text-decoration: none;
+  padding-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+#searchInput{
+  width: 150px;
+  height: 32px;
+  border: 3px solid #2279A8;
+  border-radius: 20px;
+  padding: 5px;
+}
+footer {
+  height: 70px;
+  width: 100%;
+  background-color: #1E1E1E;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+}
