@@ -45,7 +45,7 @@ li {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #000000;
   font-size: 16px;
 }
 
@@ -60,7 +60,7 @@ a {
 table { 
   border-spacing: 1; 
   border-collapse: collapse; 
-  background-color:ffffff;
+  background-color:#ffffff;
   border-radius:6px;
   overflow:hidden;
   max-width:1200px; 
@@ -94,4 +94,10 @@ footer {
   position: fixed;
   bottom: 0px;
   left: 0px;
+}
+footer a {
+  color: #ffffff;
+}
+footer a:visited {
+  color: #ffffff;
 }
