@@ -20,7 +20,7 @@ A simple CRUD application for managing phone numbers.
 
 1. Clone the repository:
 ```
-git clone [https://github.com/gitesiek/phonenumber_crud.git](https://github.com/gitesiek/phonenumber_crud.git)
+git clone https://github.com/gitesiek/phonenumber_crud.git
 cd phone-number-management
 ```
 2. Create and activate a virtual environment:
