@@ -69,11 +69,17 @@ table {
   position:relative;
 }
 
-thead tr        { 
+thead tr { 
   height:60px;
   background-color:#1E1E1E;
   color: #ffffff;
   font-size:16px;
+}
+
+tbody tr {
+  height: 48px;
+  border-bottom: 1px solid black;
+  text-align: center;
 }
 
 footer {
