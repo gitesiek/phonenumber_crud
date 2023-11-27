@@ -45,14 +45,9 @@ li {
 
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
   font-size: 16px;
 }
-
-a:visited { color: #ffffff; }
-a:focus { color: #ffffff; }
-a:hover { color: #ffffff; }
-a:active { color: #ffffff; }
 
 #searchInput{
   width: 150px;
@@ -93,4 +88,10 @@ footer {
   position: fixed;
   bottom: 0px;
   left: 0px;
+}
+footer a {
+  color: #ffffff;
+}
+footer a:visited {
+  color: #ffffff;
 }
