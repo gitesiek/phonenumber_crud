@@ -1,0 +1,23 @@
+{% extends "home.html" %}
+{% load static %}
+{% block content %}
+  <div class="login-page">
+    <div class="login-box">
+      <div class="login-header">
+        <!-- wstawiłem statyczne ścieżki które trzeba zmapować -->
+        <img src="{% static 'src/spsk1_logo.svg' %}" alt="logo_spsk1"></a>
+      </div>
+      <div class="content">
+        <form method="post" action="{% url 'login' %}">
+          {% csrf_token %}
+          <div class="form-group">
+            <input type="text" id="username" name="username" placeholder="Nazwa użytkownika" required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="password" name="password" placeholder="Hasło" required>
+          </div>
+          <button type="submit">Zaloguj się</button>
+        </form>
+      </div>
+  </div>
+{% endblock content %}

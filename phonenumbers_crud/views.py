@@ -9,12 +9,11 @@ def clinic_list(request):
     clinics = Clinic.objects.all()
     return render(request, 'clinic_list.html', {'clinics': clinics})
 
-def login_page(request):
-    return redirect('accounts/login')
 
 @login_required
 def crud_page(request):
     return render(request, 'crud/crud_page.html')
+
 
 @login_required
 def add_clinic(request):
@@ -28,10 +27,12 @@ def add_clinic(request):
         form = ClinicForm()
     return render(request, 'crud/add_clinic.html', {'form': form})
 
+
 @login_required
 def edit_clinic(request):
     clinics = Clinic.objects.all()
     return render(request, 'crud/edit_clinic.html', {'clinics': clinics})
+
 
 @login_required
 def edit(request, clinic_id):
@@ -45,6 +46,7 @@ def edit(request, clinic_id):
     else:
         form = ClinicForm(instance=clinic)
     return render(request, 'crud/edit.html', {'form': form})
+
 
 @login_required
 def delete_clinic(request, clinic_id):
