@@ -22,9 +22,8 @@
       }
 </script>
 
-
-<div id="tableContainer">
-  <table class='table'>
+<div id="">
+  <table>
     <thead>
       <tr>
         <th>Jednostka organizacyjna</th>
@@ -33,9 +32,8 @@
         <th>Nr. Tel</th>
       </tr>
     </thead>
-    
-    {% for clinic in clinics %}
     <tbody>
+      {% for clinic in clinics %}
       <tr>
         <td>{{ clinic.name }}</td>
         <td>{{ clinic.department }}</td>
@@ -43,8 +41,8 @@
         <td>{{ clinic.phone }}</td>
         {% block edit %}{% endblock edit %}
       </tr>
+      {% endfor %}
     </tbody>
-    {% endfor %}
   </table>
 </div>
-{% endblock content %}
+{% endblock content %} 

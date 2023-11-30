@@ -45,7 +45,7 @@ li {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #000000;
   font-size: 16px;
 }
 
@@ -56,6 +56,32 @@ a {
   border-radius: 20px;
   padding: 5px;
 }
+
+table { 
+  border-spacing: 1; 
+  border-collapse: collapse; 
+  background-color:#ffffff;
+  border-radius:6px;
+  overflow:hidden;
+  max-width:1200px; 
+  width:100%;
+  margin:0 auto;
+  position:relative;
+}
+
+thead tr { 
+  height:60px;
+  background-color:#1E1E1E;
+  color: #ffffff;
+  font-size:16px;
+}
+
+tbody tr {
+  height: 48px;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
 footer {
   height: 70px;
   width: 100%;
@@ -68,4 +94,10 @@ footer {
   position: fixed;
   bottom: 0px;
   left: 0px;
+}
+footer a {
+  color: #ffffff;
+}
+footer a:visited {
+  color: #ffffff;
 }
