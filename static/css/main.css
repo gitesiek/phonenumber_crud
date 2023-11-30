@@ -101,3 +101,54 @@ footer a {
 footer a:visited {
   color: #ffffff;
 }
+
+/* login page CSS  */
+
+.login-page{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box{
+  width: 300px;
+  border: 1px solid black;
+  
+}
+
+.login-header{
+  padding: 20px;
+}
+
+.content{
+  padding: 20px;
+}
+
+.form-group{
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
