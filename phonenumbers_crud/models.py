@@ -1,6 +1,7 @@
 from django.db import models
 import csv
 
+
 class Clinic(models.Model):
     name = models.CharField(max_length=50)
     department = models.CharField(max_length=50)
@@ -21,4 +22,4 @@ def import_clinics_from_csv():
                 department=row[2],
                 office=row[3],
                 phone=row[4]
-            )     
+            )
