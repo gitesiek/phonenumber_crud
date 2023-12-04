@@ -5,17 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Numery telefonów szpitalnych - logowanie</title>
   {%load static%}
-  <!-- <link rel="shortcut icon" type="image/ico" href="{% static 'src/favicon.ico' %}" >
-  <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}"/> -->
-  <link rel="stylesheet" type="text/css" href="/static/css/main.css"/>
+  <link rel="shortcut icon" type="image/ico" href="{% static 'src/favicon.ico' %}" >
+  <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}"/>
 </head>
 <body>
   <div class="login-page">
     <div class="login-box">
       <div class="login-header">
-        <!-- wstawiłem statyczne ścieżki które trzeba zmapować -->
-        <img src="/static/src/spsk1_logo.svg" alt="logo_spsk1">
-        <!-- <a href="{% url 'clinic_list' %}"><img src="{% static 'src/' %}" alt="My image"></a> -->
+        <img src="{% static 'src/spsk1_logo.svg' %}" alt="logo_spsk1">
       </div>
       <div class="content">
         <form method="post" action="{% url 'login' %}">
