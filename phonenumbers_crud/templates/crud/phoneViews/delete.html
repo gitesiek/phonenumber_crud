@@ -8,16 +8,35 @@
 <div class="">
     <dl class="">
         <dt class="">
-            <!-- The Description Term element -->
+            Jednostka organizacyjna
         </dt>
         <dd class="">
-            <!-- The Description Details element -->
+            {{ clinic.name }}
+        </dd>
+        <dt class="">
+            Jednostka organizacyjna
+        </dt>
+        <dd class="">
+            {{ clinic.department }}
+        </dd>
+        <dt class="">
+            Jednostka organizacyjna
+        </dt>
+        <dd class="">
+            {{ clinic.office }}
+        </dd>
+        <dt class="">
+            Jednostka organizacyjna
+        </dt>
+        <dd class="">
+            {{ clinic.phone }}
         </dd>
     </dl>
-    <form>
-        <input class="" type="submit" value="delete" />
-        <a href=""> Powrót </a>
+    <form method="post">
+        {% csrf_token %}
+        <input class="" type="submit" value="Usuń" />
     </form>
+    <a href=""> Powrót </a>
 </div>
 
 {% endblock content %} 

@@ -7,7 +7,7 @@ from django.contrib import messages
 
 def clinic_list(request):
     clinics = Clinic.objects.all()
-    return render(request, 'clinic_list.html', {'clinics': clinics})
+    return render(request, 'crud/phoneViews/phone_list.html', {'clinics': clinics})
 
 
 @login_required
@@ -25,7 +25,7 @@ def add_clinic(request):
             return redirect(crud_page)
     else:
         form = ClinicForm()
-    return render(request, 'crud/add_clinic.html', {'form': form})
+    return render(request, 'crud/phoneViews/create.html', {'form': form})
 
 
 @login_required
@@ -45,7 +45,7 @@ def edit(request, clinic_id):
             return redirect(crud_page)
     else:
         form = ClinicForm(instance=clinic)
-    return render(request, 'crud/edit.html', {'form': form})
+    return render(request, 'crud/phoneViews/edit.html', {'form': form})
 
 
 @login_required
@@ -55,4 +55,4 @@ def delete_clinic(request, clinic_id):
         clinic.delete()
         messages.success(request, 'Klinika usunięta pomyślnie.')
         return redirect('crud_page')
-    return render(request, 'crud/confirm_delete_clinic.html', {'clinic': clinic})
+    return render(request, 'crud/phoneViews/delete.html', {'clinic': clinic})

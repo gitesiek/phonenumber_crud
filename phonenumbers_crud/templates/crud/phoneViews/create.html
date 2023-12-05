@@ -8,23 +8,24 @@
 <!-- main block context create form -->
 <div class="">
     <div class="">
-        <form>
+        <form method="post">
+            {% csrf_token %}
             <!-- block context row -->
             <div class="form-group">
                 <label>Jednostka organizacyjna</label>
-                <input>
+                {{form.name}}
             </div>
             <div class="form-group">
                 <label>Lokalizacja</label>
-                <input>
+                {{form.department}}
             </div>
             <div class="form-group">
                 <label>Numer wew</label>
-                <input>
+                {{form.office}}
             </div>
             <div class="form-group">
                 <label>Nr. Tel</label>
-                <input>
+                {{form.phone}}
             </div>
             <div class="form-group">
                 <input class="" type="submit" value="Dodaj" />
