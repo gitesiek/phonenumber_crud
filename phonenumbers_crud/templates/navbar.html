@@ -7,6 +7,11 @@
         <ul class="navmenu">
             <li class="nav-item">
                 <a class="nav-item" href="{% url 'edit_clinic' %}">Lista telefonów</a>
+                <ul class="nav-drop">
+                    <li class="drop-item">
+                        <a class="nav-item" href="{% url "add_clinic" %}"> Dodaj numer </a> 
+                    </li>
+                </ul>
             </li>
             <li class="nav-item">
                 <a class="nav-item" href="">Użytkownicy</a> <!-- Dodawanie edytowanie userow, wylaczanie kont, dodawanie grup, nadawanie uprawnien,  -->
