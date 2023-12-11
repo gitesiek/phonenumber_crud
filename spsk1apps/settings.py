@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'phonenumbers_crud',
     'users',
+    'image_resize',
 ]
 
 MIDDLEWARE = [
