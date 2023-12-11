@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dobry posilek w szpitalu </title>
+</head>
+<body>
+    <h1>Dobry posilek w szpitalu</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+    <a href="{% url 'images_from_folder' %}"> Pobierz zdjecia </a>
+</body>
+</html>
