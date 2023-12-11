@@ -181,3 +181,9 @@ button {
   cursor: pointer;
 }
 
+/* crud page */
+
+.form-box {
+  width: 300px;
+  padding: 20px;
+}
