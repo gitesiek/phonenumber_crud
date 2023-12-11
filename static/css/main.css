@@ -63,6 +63,7 @@ li a:hover {
 .drop-item {
   padding: 10px;
   text-align: left;
+  list-style: none;
 }
 
 /* Zmiana widoczności rozwijanego menu po najechaniu myszką na element menu */
