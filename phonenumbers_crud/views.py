@@ -22,7 +22,7 @@ def add_clinic(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Klinika dodana pomyślnie.')
-            return redirect(crud_page)
+            return redirect(edit_clinic)
     else:
         form = ClinicForm()
     return render(request, 'crud/phoneViews/create.html', {'form': form})

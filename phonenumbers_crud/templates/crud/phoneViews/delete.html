@@ -36,7 +36,11 @@
         {% csrf_token %}
         <input class="" type="submit" value="Usuń" />
     </form>
-    <a href=""> Powrót </a>
+    <div class="">
+        <form>
+            <a href="{% url "edit_clinic" %}"> Powrót </a>
+        </form>
+    </div>
 </div>
 
 {% endblock content %} 
