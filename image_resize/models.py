@@ -52,3 +52,7 @@ def resize_and_rename_image(sender, instance, **kwargs):
 
     if os.path.exists(filepath):
         os.remove(filepath)
+
+
+class UploadedImage(models.Model):
+    image = models.ImageField(upload_to='uploads/')
