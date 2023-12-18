@@ -31,8 +31,8 @@
         <tr>
           <th>Jednostka organizacyjna</th>
           <th>Lokalizacja</th>
-          <th>Numer wew</th>
-          <th>Nr. Tel</th>
+          <th>Numer wew.</th>
+          <th>Numer tel.</th>
         </tr>
       </thead>
       <tbody>
@@ -40,7 +40,7 @@
         <tr>
           <td>{{ clinic.name }}</td>
           <td>{{ clinic.department }}</td>
-          <td>{{ clinic.office }}</td>
+          <td style="font-weight: bold;">{{ clinic.office }}</td>
           <td>{{ clinic.phone }}</td>
           {% block edit %}{% endblock edit %}
         </tr>

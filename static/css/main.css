@@ -8,8 +8,16 @@
     font: inherit;
 }
 
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../font/Ubuntu-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
     min-height: 100vh;
+    font-family: 'Ubuntu'
 }
 
 img, picture, svg {
