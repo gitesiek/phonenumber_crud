@@ -33,7 +33,10 @@
     </dl>
     <form method="post">
         {% csrf_token %}
-        <input class="" type="submit" value="ukryj" />
+        <label class="details_toggle-switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
     </form>
     <div class="">
         <form>
