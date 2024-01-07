@@ -4,15 +4,37 @@
 <h1> Szczegóły </h1>
 
 <!-- main block context delete form -->
-<div class="">
-    <dl class="">
-        <dt class="">
-           test <!-- The Description Term element -->
+<div class="form-box">
+    <dl class="form-context">
+        <dt class="form-header">
+            Jednostka organizacyjna
         </dt>
-        <dd class="">
-            test<!-- The Description Details element -->
+        <dd class="form-content">
+            {{ clinic.name }}
+        </dd>
+        <dt class="form-header">
+            Lokalizacja
+        </dt>
+        <dd class="form-content">
+            {{ clinic.department }}
+        </dd>
+        <dt class="form-header">
+            Numer wew
+        </dt>
+        <dd class="form-content">
+            {{ clinic.office }}
+        </dd>
+        <dt class="form-header">
+            Nr. Tel
+        </dt>
+        <dd class="form-content">
+            {{ clinic.phone }}
         </dd>
     </dl>
+    <form method="post">
+        {% csrf_token %}
+        <input class="" type="submit" value="ukryj" />
+    </form>
     <div class="">
         <form>
             <a href="{% url "edit_clinic" %}"> Powrót </a>
