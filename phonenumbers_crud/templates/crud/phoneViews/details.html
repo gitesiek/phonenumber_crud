@@ -31,15 +31,13 @@
             {{ clinic.phone }}
         </dd>
     </dl>
-    <form method="post">
-        {% csrf_token %}
-        <label class="details_toggle-switch">
-            <input type="checkbox">
-            <span class="slider"></span>
-        </label>
-    </form>
-    <div class="">
-        <form>
+    <div class="cru_action">
+        <form method="post">
+            {% csrf_token %}
+            <label class="details_toggle-switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
             <a href="{% url "edit_clinic" %}"> Powrót </a>
         </form>
     </div>
