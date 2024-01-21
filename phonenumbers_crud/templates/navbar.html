@@ -1,20 +1,34 @@
 {% load static %}
+
 <nav class="navbar">
     <div class="navlogo">
         <a href="{% url 'clinic_list' %}"><img src="{% static 'src/phone_logo.svg' %}" alt="My image"></a>
     </div>
+    {% if user.is_authenticated %}
     <div class="navbarmenu">
         <ul class="navmenu">
             <li class="nav-item">
                 <a class="nav-item" href="{% url 'edit_clinic' %}">Lista telefonów</a>
+                <ul class="nav-drop">
+                    <li class="drop-item">
+                        <a class="nav-item" href="{% url 'add_clinic' %}"> Dodaj numer </a> 
+                    </li>
+                </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-item" href="">Użytkownicy</a> <!-- Dodawanie edytowanie userow, wylaczanie kont, dodawanie grup, nadawanie uprawnien,  -->
+                <a class="nav-item" href="{%url 'user_list_page' %}">Użytkownicy</a> <!-- Dodawanie edytowanie userow, wylaczanie kont, dodawanie grup, nadawanie uprawnien,  -->
+            </li>
+            <li class="nav-item">
+                <a class="nav-item" href="{%url 'group_list_page' %}">Grupy</a> <!-- Dodawanie edytowanie userow, wylaczanie kont, dodawanie grup, nadawanie uprawnien,  -->
             </li>
             <li class="nav-item">
                 <a class="nav-item" href="">Ustawienia</a> <!-- zmiana hasła, dane o uzytkowniku, wersja aplikacji -->
             </li>
+            <li class="nav-item">
+                <a class="nav-item" href="{% url 'logout' %}">Wyloguj</a> <!-- Dodawanie edytowanie userow, wylaczanie kont, dodawanie grup, nadawanie uprawnien,  -->
+            </li>
         </ul>
+    {%endif%}
         <form class="">
             <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="Szukaj">
         </form>

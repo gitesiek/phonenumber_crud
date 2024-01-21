@@ -1,0 +1,42 @@
+<!-- ending -->
+{% extends "base.html" %}
+{% block content %}
+
+
+
+
+<!-- main block context create form -->
+<div class="form-box">
+    <h1> Edycja </h1>
+    <div class="form-context">
+        <form method="post">
+            {% csrf_token %}
+            <!-- block context row -->
+            <div class="form-group">
+                <label>Jednostka organizacyjna</label>
+                {{form.name}}
+            </div>
+            <div class="form-group">
+                <label>Lokalizacja</label>
+                {{form.department}}
+            </div>
+            <div class="form-group">
+                <label>Numer wew</label>
+                {{form.office}}
+            </div>
+            <div class="form-group">
+                <label>Nr. Tel</label>
+                {{form.phone}}
+            </div>
+            <div class="form-group">
+                <input class="btn_sub" type="submit" value="Zapisz" />
+            </div>
+        </form>
+    </div>
+
+</div>
+<div class="cru_action">
+        <a href="{% url "edit_clinic" %}"> Powrót </a>
+</div>
+
+{% endblock content %} 

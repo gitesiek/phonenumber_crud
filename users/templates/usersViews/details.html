@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1> Szczegóły </h1>
+
+<!-- main block context delete form -->
+<div class="form-box">
+    <dl class="form-context">
+        <dt class="form-header">
+            Imie
+        </dt>
+        <dd class="form-content">
+            {{ clinic.name }}
+        </dd>
+        <dt class="form-header">
+            Nazwisko
+        </dt>
+        <dd class="form-content">
+            {{ clinic.department }}
+        </dd>
+        <dt class="form-header">
+            Email
+        </dt>
+        <dd class="form-content">
+            {{ clinic.office }}
+        </dd>
+        <dt class="form-header">
+            Jednostka
+        </dt>
+        <dd class="form-content">
+            {{ clinic.phone }}
+        </dd>
+        <dt class="form-header">
+            Aktywny
+        </dt>
+        <dd class="form-content">
+            {{ clinic.phone }}
+        </dd>
+    </dl>
+    <form method="post">
+        {% csrf_token %}
+        <label class="details_toggle-switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </form>
+    <div class="">
+        <form>
+            <a href="{% url "edit_clinic" %}"> Powrót </a>
+        </form>
+    </div>
+</div>
+
+{% endblock content %} 

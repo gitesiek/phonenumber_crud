@@ -22,27 +22,32 @@
       }
 </script>
 
-<div id="">
-  <table>
-    <thead>
-      <tr>
-        <th>Jednostka organizacyjna</th>
-        <th>Lokalizacja</th>
-        <th>Numer wew</th>
-        <th>Nr. Tel</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for clinic in clinics %}
-      <tr>
-        <td>{{ clinic.name }}</td>
-        <td>{{ clinic.department }}</td>
-        <td>{{ clinic.office }}</td>
-        <td>{{ clinic.phone }}</td>
-        {% block edit %}{% endblock edit %}
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-</div>
+<!--- adds layout with clinic_list.html-->
+
+<section>
+  <div id="">
+    <table>
+      <thead>
+        <tr>
+          <th>Imie</th>
+          <th>Nazwisko</th>
+          <th>Email</th>
+          <th>Jednostka</th>
+          <th>Aktywny</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for clinic in clinics %}
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          {% block edit %}{% endblock edit %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
 {% endblock content %} 

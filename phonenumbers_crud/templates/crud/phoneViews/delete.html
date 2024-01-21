@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1> Usuwanie </h1>
+
+<h3> Czy na pewno chcesz to usunąć ? </h3>
+<!-- main block context delete form -->
+<div class="form-box">
+    <dl class="form-context">
+        <dt class="form-header">
+            Jednostka organizacyjna
+        </dt>
+        <dd class="form-content">
+            {{ clinic.name }}
+        </dd>
+        <dt class="form-header">
+            Lokalizacja
+        </dt>
+        <dd class="form-content">
+            {{ clinic.department }}
+        </dd>
+        <dt class="form-header">
+            Numer wew
+        </dt>
+        <dd class="form-content">
+            {{ clinic.office }}
+        </dd>
+        <dt class="form-header">
+            Nr. Tel
+        </dt>
+        <dd class="form-content">
+            {{ clinic.phone }}
+        </dd>
+    </dl>
+    <div class="cru_action">
+        <form method="post">
+            {% csrf_token %}
+            <input class="btn_sub" type="submit" value="Usuń" />
+            <a href="{% url "edit_clinic" %}"> Powrót</a>
+        </form>
+    </div>
+</div>
+
+{% endblock content %} 

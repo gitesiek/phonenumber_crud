@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-qg2tdm^*kn0bmiipafdf2@5$%21f^l*)8g7r89co8u)67^*)_1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -131,5 +130,5 @@ STATICFILES_DIRS = (
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = "/crud_page"
+LOGIN_REDIRECT_URL = "/edit_clinic"
 LOGOUT_REDIRECT_URL = "/"
