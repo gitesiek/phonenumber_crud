@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Clinic
+from .models import Contacts
 
-admin.site.register(Clinic)
+admin.site.register(Contacts)
