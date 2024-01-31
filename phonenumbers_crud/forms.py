@@ -3,11 +3,11 @@ from .models import Contacts
 
 
 class ContactsForm(forms.ModelForm):
-    name = forms.CharField(label='Nazwa')
-    department = forms.CharField(label='Nazwa2')
-    office = forms.CharField(label='Nr wew')
-    phone = forms.CharField(label='Nr tel')
+    jd_organizcyjnej = forms.CharField(label='Nazwa')
+    lokalizacja = forms.CharField(label='Nazwa2')
+    num_wew = forms.CharField(label='Nr wew')
+    num_tel = forms.CharField(label='Nr tel')
 
     class Meta:
         model = Contacts
-        fields = ['name', 'department', 'office', 'phone']
+        fields = ['jd_organizcyjnej', 'lokalizacja', 'num_wew', 'num_tel']

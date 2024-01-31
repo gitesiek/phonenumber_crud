@@ -37,12 +37,13 @@
         </tr>
       </thead>
       <tbody>
-        {% for clinic in clinics %}
+        {% for user in users %}
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>{{user.name}}</td>
+          <td>{{user.surname}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.department}}</td>
+          <td>{{user.active}}</td>
           {% block edit %}{% endblock edit %}
         </tr>
         {% endfor %}

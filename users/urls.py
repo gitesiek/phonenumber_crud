@@ -11,10 +11,10 @@ urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),
 
     path('user_list', user_list, name='user_list_page'),
-    path('user/create', user_create),
+    path('user/create', user_create, name='add_user'),
     path('user/delete', user_delete),
     path('user/details', user_details),
-    path('user/edit', user_edit),
+    path('user/edit', user_edit, name='edit_user'),
 
     path('group_list', group_list, name='group_list_page'),
     path('group/create', group_create),

@@ -38,10 +38,10 @@
       <tbody>
         {% for clinic in clinics %}
         <tr>
-          <td>{{ clinic.name }}</td>
-          <td>{{ clinic.department }}</td>
-          <td style="font-weight: bold;">{{ clinic.office }}</td>
-          <td>{{ clinic.phone }}</td>
+          <td>{{ clinic.jd_organizcyjnej }}</td>
+          <td>{{ clinic.lokalizacja }}</td>
+          <td style="font-weight: bold;">{{ clinic.num_wew }}</td>
+          <td>{{ clinic.num_tel }}</td>
           {% block edit %}{% endblock edit %}
         </tr>
         {% endfor %}
