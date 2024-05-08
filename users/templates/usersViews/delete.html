@@ -11,31 +11,31 @@
             Imie
         </dt>
         <dd class="form-content">
-            {{ clinic.name }}
+            {{ user.name }}
         </dd>
         <dt class="form-header">
             Nazwisko
         </dt>
         <dd class="form-content">
-            {{ clinic.department }}
+            {{ user.surname }}
         </dd>
         <dt class="form-header">
             Email
         </dt>
         <dd class="form-content">
-            {{ clinic.office }}
+            {{ user.email }}
         </dd>
         <dt class="form-header">
             Jednostka
         </dt>
         <dd class="form-content">
-            {{ clinic.phone }}
+            {{ user.department }}
         </dd>
         <dt class="form-header">
             Aktywny
         </dt>
         <dd class="form-content">
-            {{ clinic.phone }}
+            {{ user.active }}
         </dd>
     </dl>
     <form method="post">
@@ -44,7 +44,7 @@
     </form>
     <div class="">
         <form>
-            <a href="{% url "edit_clinic" %}"> Powrót </a>
+            <a href="{% url "edit_user" %}"> Powrót </a>
         </form>
     </div>
 </div>

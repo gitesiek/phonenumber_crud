@@ -1,6 +1,6 @@
 {% extends "crud/phoneViews/phone_list.html" %}
 {% block edit %}
-<td><a href="{% url 'edit' clinic.id %}">Edytuj</a> </td>
-<td><a href="{% url 'delete' clinic.id %}">Usuń</a> </td>
+<td><a href="{% url 'edit' clinic.contact_id %}">Edytuj</a> </td>
+<td><a href="{% url 'delete' clinic.contact_id %}">Usuń</a> </td>
 {% endblock edit %}
 
