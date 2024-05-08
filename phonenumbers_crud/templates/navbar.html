@@ -18,8 +18,11 @@
             <li class="nav-item">
                 <a class="nav-item" href="{%url 'user_list_page' %}">Użytkownicy</a> <!-- Dodawanie edytowanie userow, wylaczanie kont, dodawanie grup, nadawanie uprawnien,  -->
                 <ul class="nav-drop">
+
+                  <!-- widok do dodawnia użytkownikow -->
                     <li class="drop-item">
-                        <a class="nav-item" href="{% url 'add_user' %}"> Dodaj użytkownika </a> 
+                        <a class="nav-item" href="{% url 'user_create' %}"> Dodaj użytkownika </a> 
+
                     </li>
                 </ul>
             </li>

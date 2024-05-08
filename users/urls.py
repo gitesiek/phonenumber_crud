@@ -11,7 +11,8 @@ urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),
 
     path('user_list', user_list, name='user_list_page'),
-    path('user/create', user_create, name='add_user'),
+    path('user/create', user_create, name='user_create'), #to trzeba dodac do wszystkich niżej, z taką nazwą jak chcesz miec w html
+
     path('user/delete', user_delete),
     path('user/details', user_details),
     path('user/edit', user_edit, name='edit_user'),
