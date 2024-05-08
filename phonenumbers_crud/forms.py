@@ -1,13 +1,13 @@
 from django import forms
-from .models import Clinic
+from .models import Contacts
 
 
-class ClinicForm(forms.ModelForm):
-    name = forms.CharField(label='Nazwa')
-    department = forms.CharField(label='Nazwa2')
-    office = forms.CharField(label='Nr wew')
-    phone = forms.CharField(label='Nr tel')
+class ContactsForm(forms.ModelForm):
+    jd_organizcyjnej = forms.CharField(label='Nazwa')
+    lokalizacja = forms.CharField(label='Nazwa2')
+    num_wew = forms.CharField(label='Nr wew')
+    num_tel = forms.CharField(label='Nr tel')
 
     class Meta:
-        model = Clinic
-        fields = ['name', 'department', 'office', 'phone']
+        model = Contacts
+        fields = ['jd_organizcyjnej', 'lokalizacja', 'num_wew', 'num_tel']
