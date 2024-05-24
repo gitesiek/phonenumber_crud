@@ -57,16 +57,3 @@ def delete_clinic(request, clinic_id):
         return redirect('edit_clinic')
     return render(request, 'crud/phoneViews/delete.html', {'clinic': clinic})
 
-# metoda ktora za to odpowiada
-@login_required
-def add_user(request):
-    if request.method == 'POST':
-        form = ClinicForm(request.POST)
-        if form.is_vaild():
-            form.save()
-            messages.success(request, 'Użytkownik został dodany pomyślnie.')
-            return redirect(crud_page)
-    else:
-        form = ClinicForm()
-    return render(request, 'crud/phoneViews/create.html', {'form': form})
-
