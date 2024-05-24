@@ -17,7 +17,8 @@
 
 body {
     min-height: 100vh;
-    font-family: 'Ubuntu'
+    font-family: 'Ubuntu';
+    padding-bottom: 80px;
 }
 
 img, picture, svg {
@@ -193,9 +194,13 @@ button {
 
 .form-box {
   width: 300px;
-  padding: 20px;
+  padding: 10px;
 }
 
+.cru_action {
+  width: 300px;
+  padding: 10px;
+}
 /* toggle switch */
 
 .details_toggle-switch {
